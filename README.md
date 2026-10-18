@@ -1,4 +1,43 @@
-# vinext-starter
+# FarmSight XAI
+
+FarmSight XAI is an agriculture research project exploring crop data, historical weather, and explainable machine learning to support transparent crop-risk analysis. The repository includes a research notebook and a web prototype; the prototype's baseline predictions are not trained-model results.
+
+## Research components
+
+- Clean and audit ICRISAT crop records and geocoded locations.
+- Acquire and validate consistent historical weather for the accepted locations.
+- Prepare reproducible crop/weather features, then train and evaluate models.
+- Apply SHAP and LIME after model training to investigate predictions.
+
+## Current verified dataset and weather status
+
+The clean ICRISAT dataset contains **36,951 records**, with **229 accepted geocoded locations**. Open-Meteo historical downloads completed for **14 locations** before quota blocking.
+
+The CDS one-day pilot and the Chittoor **1966–2017** pilot are verified. The full-span pilot contains **455,832 hourly timestamps**, with **0 missing `t2m` values** and **0 missing `tp` values**. These checks establish the pilot result; bulk CDS acquisition remains incomplete.
+
+The latest notebook checkpoint is `6f7b317ecba5fbe2c2f2adeb17853152542ef8b6`. See [PROJECT_STATUS.md](docs/PROJECT_STATUS.md) for the recorded checkpoint facts.
+
+## Repository structure
+
+| Path | Purpose |
+| --- | --- |
+| `notebooks/FarmSight_XAI_ML_Pipeline.ipynb` | Research workflow and saved checkpoint outputs |
+| `docs/` | Verified project status and research documentation |
+| `app/` | Web prototype, weather API, and marketplace API |
+| `components/`, `hooks/`, `lib/` | Interface components and shared helpers |
+| `db/`, `drizzle/` | Local database schema and migrations |
+| `scripts/` | Dependency installation and framework runtime helpers |
+| `examples/d1/` | Optional D1 integration example |
+
+## Current limitations
+
+CDS bulk acquisition is not completed. The latest batch attempt is paused because the generated Colab cells need correction; the next task is to repair and test the resumable CDS acquisition cell. Model training, evaluation, SHAP, and LIME have not started. Pilot weather validation does not establish coverage for all accepted locations, and prototype displays must not be presented as validated research results.
+
+## Reproducibility and no-fabricated-results policy
+
+Preserve the notebook checkpoint and record data sources, request parameters, date ranges, coordinates, validation checks, and actual outputs when reproducing work. Keep credentials outside committed files. Report completed, failed, paused, and unrun work explicitly. Do not invent downloads, coverage, model metrics, evaluation outcomes, or SHAP/LIME explanations; label demonstrations and baseline predictions clearly. Claim a result only when it is supported by retained execution evidence.
+
+## Web prototype development
 
 A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.
 
