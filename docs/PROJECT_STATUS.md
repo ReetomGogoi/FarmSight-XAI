@@ -1,0 +1,14 @@
+- Project: FarmSight XAI
+- Clean ICRISAT dataset: 36,951 records
+- Accepted geocoded locations: 229
+- Open-Meteo historical downloads: 14 locations before quota blocking
+- CDS one-day pilot: verified
+- CDS Chittoor 1966–2017 pilot: verified
+- Full-span pilot contains 455,832 hourly timestamps
+- Missing t2m values: 0
+- Missing tp values: 0
+- CDS bulk acquisition: not completed
+- Latest batch attempt: paused because the generated Colab cells need correction
+- Model training, evaluation, SHAP and LIME: not started
+- Latest notebook checkpoint: 6f7b317ecba5fbe2c2f2adeb17853152542ef8b6
+- Next task: repair and test the resumable CDS acquisition cell
