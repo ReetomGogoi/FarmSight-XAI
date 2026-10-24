@@ -13,6 +13,15 @@ FarmSight XAI is a decision-support research prototype, not an autonomous agrono
 - Prepare reproducible crop/weather features, then train and evaluate models.
 - Apply SHAP and LIME after model training to investigate predictions.
 
+## Data sources and intended roles
+
+- **ICRISAT district-level crop records:** historical area, production, and yield evidence used for the structured research dataset.
+- **CDS ERA5 time-series data:** the selected source for consistent historical temperature and precipitation acquisition.
+- **Open-Meteo:** retained for current/live weather access in the web prototype and for the documented limited historical-download attempt.
+- **Farmer-provided conditions:** optional operational inputs that must be identified as estimates rather than measured sensor observations.
+
+Historical training inputs and current website weather must remain clearly separated so that annual historical features are not misrepresented as validated real-time predictions.
+
 ## Current verified dataset and weather status
 
 The clean ICRISAT dataset contains **36,951 records**, with **229 accepted geocoded locations**. Open-Meteo historical downloads completed for **14 locations** before quota blocking.
