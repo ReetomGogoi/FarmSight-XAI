@@ -46,6 +46,15 @@ The latest notebook checkpoint is `6f7b317ecba5fbe2c2f2adeb17853152542ef8b6`. Se
 
 CDS bulk acquisition is not completed. The latest batch attempt is paused because the generated Colab cells need correction; the next task is to repair and test the resumable CDS acquisition cell. Model training, evaluation, SHAP, and LIME have not started. Pilot weather validation does not establish coverage for all accepted locations, and prototype displays must not be presented as validated research results.
 
+## Validation safeguards
+
+- Preserve training, validation, and test separation and prevent target or temporal leakage.
+- Select models using training and validation evidence rather than repeated test-set inspection.
+- Record exact dataset hashes, feature definitions, chronological boundaries, random seeds, and library versions.
+- Validate every retained weather file for expected timestamps, required variables, units, missing values, and returned grid coordinates.
+- Treat geocoded locations as representative matched locations rather than official district centroids.
+- Do not mix CDS and Open-Meteo historical observations without an explicit provider-comparison analysis.
+
 ## Reproducibility and no-fabricated-results policy
 
 Preserve the notebook checkpoint and record data sources, request parameters, date ranges, coordinates, validation checks, and actual outputs when reproducing work. Keep credentials outside committed files. Report completed, failed, paused, and unrun work explicitly. Do not invent downloads, coverage, model metrics, evaluation outcomes, or SHAP/LIME explanations; label demonstrations and baseline predictions clearly. Claim a result only when it is supported by retained execution evidence.
