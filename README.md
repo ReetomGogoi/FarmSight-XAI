@@ -42,6 +42,10 @@ The latest notebook checkpoint is `6f7b317ecba5fbe2c2f2adeb17853152542ef8b6`. Se
 | `scripts/` | Dependency installation and framework runtime helpers |
 | `examples/d1/` | Optional D1 integration example |
 
+## Planned model evaluation
+
+The planned comparison is Logistic Regression as the interpretable baseline, Random Forest as a nonlinear tree ensemble, and XGBoost as a boosted-tree candidate. Evaluation will use an appropriate chronological split, cross-validation limited to the training period, class-aware metrics, confusion matrices, and calibration or robustness checks where justified. SHAP and LIME will be applied only after a fitted model and locked evaluation results exist. No model-performance values are claimed in this README.
+
 ## Current limitations
 
 CDS bulk acquisition is not completed. The latest batch attempt is paused because the generated Colab cells need correction; the next task is to repair and test the resumable CDS acquisition cell. Model training, evaluation, SHAP, and LIME have not started. Pilot weather validation does not establish coverage for all accepted locations, and prototype displays must not be presented as validated research results.
