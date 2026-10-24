@@ -28,7 +28,7 @@ The clean ICRISAT dataset contains **36,951 records**, with **229 accepted geoco
 
 The CDS one-day pilot and the Chittoor **1966–2017** pilot are verified. The full-span pilot contains **455,832 hourly timestamps**, with **0 missing `t2m` values** and **0 missing `tp` values**. These checks establish the pilot result; bulk CDS acquisition remains incomplete.
 
-The latest notebook checkpoint is `6f7b317ecba5fbe2c2f2adeb17853152542ef8b6`. See [PROJECT_STATUS.md](docs/PROJECT_STATUS.md) for the recorded checkpoint facts.
+The latest notebook backup commit is `dd752822301d5362640fc1f036e5dcfbacb4cc9d`. See [PROJECT_STATUS.md](docs/PROJECT_STATUS.md) for the recorded checkpoint facts.
 
 ## Repository structure
 
@@ -62,6 +62,16 @@ CDS bulk acquisition is not completed. The latest batch attempt is paused becaus
 ## Reproducibility and no-fabricated-results policy
 
 Preserve the notebook checkpoint and record data sources, request parameters, date ranges, coordinates, validation checks, and actual outputs when reproducing work. Keep credentials outside committed files. Report completed, failed, paused, and unrun work explicitly. Do not invent downloads, coverage, model metrics, evaluation outcomes, or SHAP/LIME explanations; label demonstrations and baseline predictions clearly. Claim a result only when it is supported by retained execution evidence.
+
+## Immediate roadmap
+
+1. Repair and validate the resumable CDS acquisition cell.
+2. Complete historical weather acquisition or document the final achievable coverage.
+3. Aggregate verified hourly weather into research features with explicit unit and time-boundary rules.
+4. Join crop and weather records using audited district-year keys.
+5. Freeze the modelling dataset and chronological split before training.
+6. Train and compare the three planned models, then run relevant XAI and robustness analysis.
+7. Update the research paper and web prototype only from verified outputs.
 
 ## Web prototype development
 
