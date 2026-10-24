@@ -2,6 +2,10 @@
 
 FarmSight XAI is an agriculture research project exploring crop data, historical weather, and explainable machine learning to support transparent crop-risk analysis. The repository includes a research notebook and a web prototype; the prototype's baseline predictions are not trained-model results.
 
+## Project scope and boundaries
+
+FarmSight XAI is a decision-support research prototype, not an autonomous agronomic advisory system. It combines a crop-stress research workflow with a separate farmer marketplace interface. The project does not use IoT hardware, and marketplace records are not training data. Open-Meteo is used only for live weather access; it is not a source of soil NPK or pH measurements.
+
 ## Research components
 
 - Clean and audit ICRISAT crop records and geocoded locations.
@@ -149,7 +153,7 @@ Replace the filename with the pending migration and `DB` with your D1 binding na
 
 ## Diagnostic Commands
 
-- `npm run install:ci`: perform the one locked dependency install
+- `npm run install:ci`: perform one locked dependency install
 - `npm run dev`: start the Vite/Vinext development server
 - `npm run build`: build the deployable Sites artifact
 - `npm run start`: preview the built Worker locally with D1/R2 support
